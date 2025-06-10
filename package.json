@@ -1,0 +1,80 @@
+{
+  "name": "@neoagen/brand-assets",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Official NeoAgen brand assets and design tokens",
+  "main": "dist/index.js",
+  "module": "dist/index.esm.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "assets/**/*",
+    "dist/**/*",
+    "README.md",
+    "CHANGELOG.md"
+  ],
+  "exports": {
+    ".": {
+      "import": "./dist/index.esm.js",
+      "require": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    },
+    "./assets/*": "./assets/*",
+    "./logos/*": "./assets/logos/*",
+    "./icons/*": "./assets/icons/*",
+    "./favicons/*": "./assets/favicons/*",
+    "./colors": {
+      "import": "./dist/colors.esm.js",
+      "require": "./dist/colors.js",
+      "types": "./dist/colors.d.ts"
+    },
+    "./css": "./dist/variables.css",
+    "./scss": "./dist/variables.scss"
+  },
+  "scripts": {
+    "build": "npm run build:js && npm run build:css",
+    "build:js": "rollup -c",
+    "build:css": "node scripts/build-css.js",
+    "dev": "rollup -c -w",
+    "test": "jest --passWithNoTests",
+    "lint": "echo 'No linting configured for assets package'",
+    "prepare": "npm run build",
+    "prepublishOnly": "npm test",
+    "version": "npm run build && git add -A dist",
+    "postversion": "git push && git push --tags"
+  },
+  "keywords": [
+    "neoagen",
+    "brand",
+    "assets",
+    "design-system",
+    "logos",
+    "colors",
+    "icons"
+  ],
+  "author": "NeoAgen Development Team",
+  "license": "UNLICENSED",
+  "private": false,
+  "publishConfig": {
+    "@neoagen:registry": "https://npm.pkg.github.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NeoAgen-NV/NeoAgen-Branding.git"
+  },
+  "bugs": {
+    "url": "https://github.com/NeoAgen-NV/NeoAgen-Branding/issues"
+  },
+  "homepage": "https://github.com/NeoAgen-NV/NeoAgen-Branding#readme",
+  "devDependencies": {
+    "@rollup/plugin-node-resolve": "^15.2.3",
+    "@rollup/plugin-commonjs": "^25.0.7",
+    "rollup": "^4.9.6",
+    "@rollup/plugin-terser": "^0.4.4",
+    "eslint": "^8.56.0",
+    "jest": "^29.7.0"
+  },
+  "engines": {
+    "node": ">=14.0.0",
+    "npm": ">=6.0.0"
+  }
+}

@@ -1,0 +1,21 @@
+// NeoAgen Brand Colors - SCSS Variables
+$neoagen-primary: #0047ab;
+$neoagen-secondary: #13aaff;
+$neoagen-navy: #0d153f;
+$neoagen-white: #ffffff;
+$neoagen-black: #000000;
+
+// Semantic variables
+$neoagen-text-primary: $neoagen-navy;
+$neoagen-text-inverse: $neoagen-white;
+$neoagen-bg-primary: $neoagen-white;
+$neoagen-bg-secondary: $neoagen-navy;
+
+// Color map for iteration
+$neoagen-colors: (
+  'primary': $neoagen-primary,
+  'secondary': $neoagen-secondary,
+  'navy': $neoagen-navy,
+  'white': $neoagen-white,
+  'black': $neoagen-black
+);

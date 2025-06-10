@@ -1,0 +1,20 @@
+/* NeoAgen Brand Colors - CSS Custom Properties */
+:root {
+  --neoagen-primary: #0047ab;
+  --neoagen-secondary: #13aaff;
+  --neoagen-navy: #0d153f;
+  --neoagen-white: #ffffff;
+  --neoagen-black: #000000;
+  --neoagen-text-primary: #0d153f;
+  --neoagen-text-inverse: #ffffff;
+  --neoagen-bg-primary: #ffffff;
+  --neoagen-bg-secondary: #0d153f;
+}
+
+/* Utility classes */
+.neoagen-text-primary { color: var(--neoagen-text-primary); }
+.neoagen-text-inverse { color: var(--neoagen-text-inverse); }
+.neoagen-text-brand { color: var(--neoagen-primary); }
+.neoagen-bg-primary { background-color: var(--neoagen-bg-primary); }
+.neoagen-bg-secondary { background-color: var(--neoagen-bg-secondary); }
+.neoagen-bg-brand { background-color: var(--neoagen-primary); }
